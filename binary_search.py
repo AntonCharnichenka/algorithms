@@ -3,6 +3,7 @@ from typing import Sequence
 
 
 def binary_search(pool: Sequence[int], item: int) -> int | None:
+    """O(logN)"""
     low = 0
     high = len(pool) - 1
 
@@ -24,4 +25,4 @@ def binary_search(pool: Sequence[int], item: int) -> int | None:
 
 
 assert binary_search([1, 3, 5, 7 ,9], 3) == 1
-# assert binary_search([1, 3, 5, 7 ,9], -1) is None
+assert binary_search([1, 3, 5, 7 ,9], -1) is None
