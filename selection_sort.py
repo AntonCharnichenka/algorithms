@@ -1,23 +1,25 @@
 from typing import Sequence
 
-def find_smallest(arr: Sequence[int]) -> int:
-    smallest = arr[0]
+def find_smallest(array: Sequence[int]) -> int:
     smallest_index = 0
-    for i in range(1, len(arr)):
-        if arr[i] < smallest:
-            smallest = arr[i]
+    smallest = array[smallest_index]
+
+    for i in range(1, len(array)):
+        if array[i] < smallest:
+            smallest = array[i]
             smallest_index = i
     
     return smallest_index
 
 
-def selection_sort(arr: Sequence[int]) -> list[int]:
-    sorted_arr: list[int] = []
-    for _ in range(len(arr)):
-        smallest_index = find_smallest(arr)
-        sorted_arr.append(arr.pop(smallest_index))
+def selection_sort(array: Sequence[int]) -> list[int]:
+    """O(n^2)"""
+    sorted_array: list[int] = []
+    for _ in range(len(array)):
+        smallest_index = find_smallest(array)
+        sorted_array.append(array.pop(smallest_index))
     
-    return sorted_arr
+    return sorted_array
 
 
 
