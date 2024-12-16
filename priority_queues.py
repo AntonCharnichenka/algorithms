@@ -14,7 +14,7 @@ print(a)
 # HEAPS are concrete data structures - implementations for priority queues in python,
 # which are abstract data structure
 
-# HEAPS are good forfinding 'best' element, like min or max in O(1) time,
+# HEAPS are good for finding 'best' element, like min or max in O(1) time,
 # because heaps are guarantee to follow heap property: h[k] <= h[2*k + 1] and h[k] <= h[2*k + 2]
 
 # the time it takes to do push and pop is proportional to the base-2 logarithm of the number of elements.
